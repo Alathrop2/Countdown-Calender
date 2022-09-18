@@ -1,6 +1,8 @@
 from tkinter import Tk, Canvas
 from datetime import date, datetime
 
+# getting event date from event.txt file
+
 
 def get_events():
     list_events = []
@@ -20,6 +22,7 @@ def days_between_dates(date1, date2):
     return number_of_days[0]
 
 
+# adding heading text
 root = Tk()
 c = Canvas(root, width=800, height=800, bg='black')
 c.pack()
@@ -30,7 +33,7 @@ events = get_events()
 today = date.today()
 
 vertical_space = 100
-
+# adding text for the events in the event.txt file
 for event in events:
     event_name = event[0]
     days_until = days_between_dates(event[1], today)
